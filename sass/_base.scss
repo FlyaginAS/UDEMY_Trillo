@@ -15,6 +15,7 @@ Grey dark 2: #777
 Grey dark 3: #999
 
 */
+//CSS variables*****************************************************
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
@@ -32,7 +33,12 @@ Grey dark 3: #999
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   --line: 1px solid var(--color-grey-light-2);
 }
+//SASS variables*****************************************************
+$bp-largest: 1200px;
+$bp-large: 1100px;
+$bp-medium: 900px;
 
+//BASE*****************************************************
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +51,9 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1rem== 10px, 10/16=62.5%
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
